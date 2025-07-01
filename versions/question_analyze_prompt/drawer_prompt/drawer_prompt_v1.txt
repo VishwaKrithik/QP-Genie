@@ -1,0 +1,12 @@
+def drawer_prompt(scene: str, pseudocode: str) -> str:
+    return (
+        f"""
+        You are a expert at analyzing a given PSEUDOCODE and generating complete runnable code for that using HTML canvas and JS.
+        Include HTML boilerplate, canvas element, and full JS logic inside the HTML code itself.
+
+        SCENE: {scene}
+        PSEUDOCODE: {pseudocode}
+
+        Return only the code.
+        """
+    )
