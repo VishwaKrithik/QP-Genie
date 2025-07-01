@@ -1,0 +1,15 @@
+def steps_maker_prompt(elements: str) -> str:
+    return (
+    f"""
+    You are an expert in analyzing and designing high quality pedagogically effective diagrams to be published in question
+    papers for students. Based on these ELEMENTS, you have to outline a high level pseudocode plan using HTML canvas and javascript specifying:
+        
+        - What shapes will be drawn (e.g., paths, circles, rectangles).
+        - In what order they should be drawn (background to foreground).
+        - Any helper functions you plan to use define its input, output and the action it is supposed to do.
+    
+    ELEMENTS: {elements}
+
+    Do not return any HTML / JS but instead return the pseudocode.
+    """
+)
