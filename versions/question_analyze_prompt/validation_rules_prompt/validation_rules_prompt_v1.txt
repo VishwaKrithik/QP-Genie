@@ -1,0 +1,22 @@
+def validation_rules_prompt(pseudocode: str) -> str:
+    return (
+        f"""
+        You are an expert in analyzing PSEUDOCODE for image generation and designing validation steps 
+        to crosss check with the final code output. Make sure to read the PSEUDOCODE thoroughly and create 
+        a numbered list of validation rules that can be followed to verify if the output matches the design.
+
+        Some common rules to include are:
+            - Presence of all components and elements
+            - Correct positioning and relative layout of elements
+            - Proper shapes, sizes, coordinates and positioning of elements
+            - Directional indicators point in the correct direction(e.g. arrows point in the right direction, etc.)
+            - Make sure all the components are within the canvas
+            - Make sure all the labels are close to the representing components
+            - Make sure there is no major overlapping of components
+            - Do not include javascript linkage rule
+            
+
+        PSEUDOCODE: {pseudocode}
+        Make sure to review your answer after generation.
+        """
+    )
